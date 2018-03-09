@@ -37,11 +37,6 @@ export class AppComponent {
 ## Set up
 
 ### Step 1
-```javascript
-  npm insall file-bower-resolver
-```
-
-### Step 2
 ```
   npm install ng5-decorators --save
 
