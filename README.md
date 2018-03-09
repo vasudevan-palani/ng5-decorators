@@ -9,6 +9,31 @@ For now the list is
   - EventAfter
   - EventBefore
 
+Usage is
+```typescript
+export class AppComponent {
+  title = 'app';
+
+  content = '<h1>\n  I am content from the server, just normal HTML\n</h1>\n<my-component name="hello">I am the projected content!</my-component>';
+
+  @EmitBefore("AppComponent/submit")
+  submit(test){
+    console.log("In Submit",this);
+  }
+
+  @OnEvent("AppComponent/submit")
+  test(){
+    console.log("In test");
+  }
+
+  @OnEvent("AppComponent/submit")
+  test1(){
+    console.log("In test1");
+  }
+
+}
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
